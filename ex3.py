@@ -41,6 +41,7 @@ class DroneAgent:
                     all_pos_actions.append('deliver')
                     continue
         return all_pos_actions
+    
     def best_actions(self,obs0):
         possible_actions = self.actions(obs0)
         if len(obs0['packages']) == 0:
@@ -72,10 +73,10 @@ class DroneAgent:
             return self.best_actions(obs0)
 
     def train(self):
-        self.mode = 'train'  # do not change this!
-
+        self.mode = 'train'
+        
     def eval(self):
-        self.mode = 'eval'  # do not change this!
+        self.mode = 'eval'
 
     def update(self, obs0, action, obs1, reward):
         curr_state = repr(obs0)
