@@ -5,7 +5,7 @@ all_actions = ['move_up', 'move_down', 'move_left', 'move_right','wait','reset']
 
 class DroneAgent:
     def __init__(self, n, m, alpha=0.45, gamma=0.25,epsilon=0.15):
-        self.mode = 'train' # do not change this!
+        self.mode = 'train'
         self.q = {}
         self.epsilon = epsilon
         self.alpha = alpha  # learning constant
